@@ -37,20 +37,21 @@ void Write()
     srand (time(NULL));
     while(1){
 
-        MDL->Packet->start = 0x5;
-        MDL->Packet->seq = seq;
+        MDL->Packet->start = 0x05; //lsb
+        MDL->Packet->seq = seq; //msb
+
         MDL->Packet->firstmotor_id = rand()%16;
         MDL->Packet->firstchan_id = rand()%16;
-        MDL->Packet->firstdata = rand()/100;
+        MDL->Packet->firstdata = rand()%100;
 
         MDL->Packet->secondmotor_id = rand()%16;
         MDL->Packet->secondchan_id = rand()%16;
-        MDL->Packet->seconddata = rand()/100;
+        MDL->Packet->seconddata = rand()%100;
 
         MDL->Packet->crc = Fast_CRC_Cal8Bits(0x00, 7, (uint8_t *)MDL->Packet);
 
 
-        qDebug() << "start: " + QString::number(MDL->Packet->start);
+        qDebug() << "firstdata: " + QString::number(MDL->Packet->seconddata);
         seq++;
         Client->writeDatagram((char*)MDL->Packet,sizeof(*MDL->Packet),add,8080);
         child->msleep(250);

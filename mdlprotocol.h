@@ -3,6 +3,7 @@
 #include "iostream"
 #include <QObject>
 #include <QByteArray>
+#pragma(1)
 enum warningID{
     WARNING1,
     WARNING2
@@ -59,14 +60,14 @@ enum motorID{
     cruiseID,
     moduleID
 };
-typedef struct {
-    int start :4;
-    int seq   :4;
-    int firstchan_id :4;
-    int firstmotor_id :4;
+typedef struct __attribute__((packed)){
+    uint8_t start :4;
+    uint8_t seq   :4;
+    uint8_t firstchan_id :4;
+    uint8_t firstmotor_id :4;
     uint16_t firstdata;
-    int secondchan_id :4;
-    int secondmotor_id :4;
+    uint8_t secondchan_id :4;
+    uint8_t secondmotor_id :4;
     uint16_t seconddata;
     uint8_t crc;
 }mdlpacket;
