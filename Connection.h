@@ -14,13 +14,10 @@
 
 void initialize();
 void DataGenerate(struct Eng* Vehicle, int i);
-void Write();
+void Write(int freq,int motid);
 
-
-QUdpSocket* Client;
-QHostAddress add;
 QTime tik;
-QThread* child;
+QThread* child[3];
 
 
 #endif // CONNECTION_H
