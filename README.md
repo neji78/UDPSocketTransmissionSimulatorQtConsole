@@ -1,6 +1,6 @@
 # simultor_for_data_monitor
 Hi there
-I`m here to make a simulator for testing my Data Monitor app that i explained it in itself repository.
+I am here to make a simulator for testing my Data Monitor app that i explained it in itself repository.
 Data Monitor is listening on a UDP socket. the app generate a set of random numbers as current, voltage, rpm and ..., in order to transmite this set to Data Monitor.
 the transmition is perform over an udp connetion. connection system is master-slave system base.
 so I decide to be deep about detail for learning purpose.
