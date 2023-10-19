@@ -4,7 +4,7 @@ I am here to make a simulator for testing my Data Monitor app that i explained i
 Data Monitor is listening on a UDP socket. the app generate a set of random numbers as current, voltage, rpm and ..., in order to transmite this set to Data Monitor.
 the transmition is perform over an udp connetion. connection system is master-slave system base.
 so I decide to be deep about detail for learning purpose.
-okey so let`s begin with that question "what is a simulator and when you use it?"
+okey so let is begin with that question "what is a simulator and when you use it?"
 simulator is a set of operations and components integerated to simulate one or many funations that create or define an entity or system.
 today we works a lot of simulators like video games, movies and etc.
 when you need a simulator? every time you can`t examine your system or device in real world becasue of expensive failures and costs. 
