@@ -10,7 +10,8 @@ today we works a lot of simulators like video games, movies and etc.
 when you need a simulator? every time you can`t examine your system or device in real world becasue of expensive failures and costs. 
 our simulator uses udp connection to transmite data from one point to another. in fact our connection is like point-to-point or peer-to-peer connection type but is not.
 because connection implemented based on master-slave protcol system. I will explain in more.
-connection type determine our policy of communication based on what we want.\n
+connection type determine our policy of communication based on what we want.
+
 1.peer-to-peer communication
 Peer-to-peer (P2P) is a decentralized communications model in which each party has the same capabilities and either party can initiate a communication session.
 
